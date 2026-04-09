@@ -21,7 +21,7 @@ SMODS.Joker{
         }
     end,
     calculate = function(self, card, context)
-        if context.joker_main and context.poker_hands['Full House'] then
+        if context.joker_main and next(context.poker_hands['Full House']) then
             return {
                 chips = card.ability.extra.chips
             }
