@@ -1,12 +1,13 @@
 return {
     descriptions = {
         Joker = {
-            j_BMT_BaseJoker = {
-                name = 'BaseJoker',
+            j_Planetarian_SuspiciousJoker = {
+                name = 'Suspicious Joker',
                 text = {
                     {
-                        '{C:mult}+#1# Mult',
-                        '{C:chips}+#2# Chips'
+                        '{C:chips}+#1#{} Chips if played',
+                        'hand contains',
+                        'a {C:attention}Full House{}'
                     },
                 }
             }
