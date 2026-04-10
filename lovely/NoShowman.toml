@@ -1,0 +1,15 @@
+[manifest]
+version = "1.0.0"
+priority = 0
+
+#Disable Showman joker, to turn it into a voucher
+[[patches]]
+[patches.pattern]
+target = 'game.lua'
+pattern = '''
+j_ring_master=      {order = 121,  unlocked = false, discovered = false, blueprint_compat = false, perishable_compat = true, eternal_compat = true, rarity = 2, cost = 5, name = "Showman", pos = {x=6,y=5}, set = "Joker", effect = "", config = {}, unlock_condition = {type = 'ante_up', ante = 4}},
+'''
+position = 'at'
+payload = '''
+'''
+match_indent = true

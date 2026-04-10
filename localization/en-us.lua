@@ -11,6 +11,18 @@ return {
                     },
                 }
             }
-        }  
+        },  
+        Voucher = {
+            v_Planetarian_ShowmanVoucher = {
+                name = 'Test Voucher',
+                text = {
+                    {
+                        '{C:attention}Joker{}, {C:tarot}Tarot{}, {C:planet}Planet{},',
+                        'and {C:spectral}Spectral{} cards may',
+                        'appear multiple times',
+                    }
+                }
+            }
+        }
     }
 }
