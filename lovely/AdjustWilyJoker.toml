@@ -1,0 +1,16 @@
+[manifest]
+version = "1.0.0"
+priority = 0
+
+#Adjusts Wily Joker to give 85 chips
+[[patches]]
+[patches.pattern]
+target = 'game.lua'
+pattern = '''
+j_wily=             {order = 12,  unlocked = true,  discovered = false, blueprint_compat = true, perishable_compat = true, eternal_compat = true, rarity = 1, cost = 4, name = "Wily Joker",set = "Joker", config = {t_chips = 100, type = 'Three of a Kind'}, pos = {x=1,y=14}},
+'''
+position = 'at'
+payload = '''
+j_wily=             {order = 12,  unlocked = true,  discovered = false, blueprint_compat = true, perishable_compat = true, eternal_compat = true, rarity = 1, cost = 4, name = "Wily Joker",set = "Joker", config = {t_chips = 85, type = 'Three of a Kind'}, pos = {x=1,y=14}},
+'''
+match_indent = true

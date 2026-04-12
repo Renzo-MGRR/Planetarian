@@ -1,5 +1,5 @@
 SMODS.Joker{
-    key = 'SuspiciousJoker',
+    key = 'FunnyJoker',
     atlas = 'placeholders',
     pos = {
         x = 0,
@@ -7,7 +7,7 @@ SMODS.Joker{
     },
     config = {
         extra = {
-            chips = 120
+            mult = 12
         }
     },
     rarity = 1,
@@ -16,14 +16,14 @@ SMODS.Joker{
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
-                card.ability.extra.chips
+                card.ability.extra.mult
             }
         }
     end,
     calculate = function(self, card, context)
         if context.joker_main and next(context.poker_hands['Full House']) then
             return {
-                chips = card.ability.extra.chips
+                mult = card.ability.extra.mult
             }
         end
     end

@@ -10,8 +10,18 @@ return {
                         'a {C:attention}Full House{}'
                     },
                 }
+            },
+            j_Planetarian_FunnyJoker = {
+                name = 'Funny Joker',
+                text = {
+                    {
+                        '{C:mult}+#1#{} Mult if played',
+                        'hand contains',
+                        'a {C:attention}Full House{}'
+                    },
+                }
             }
-        },  
+        },
         Voucher = {
             v_Planetarian_ShowmanVoucher = {
                 name = 'Test Voucher',
