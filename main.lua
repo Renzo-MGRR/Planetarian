@@ -25,5 +25,9 @@ local vouchers_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/
 for _, file in ipairs(vouchers_src) do
     assert(SMODS.load_file("src/vouchers/" .. file))()
 end
+local pokerhands_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/pokerhands")
+for _, file in ipairs(pokerhands_src) do
+    assert(SMODS.load_file("src/pokerhands/" .. file))()
+end
 
 --#endregion
