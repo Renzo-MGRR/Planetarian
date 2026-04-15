@@ -1,14 +1,14 @@
 --#region Atlases
 
 SMODS.Atlas{
-    key = 'placeholders',
-    path = 'placeholders.png',
+    key = 'SuspiciousJoker',
+    path = 'SuspiciousJoker.png',
     px = 71, 
     py = 95
 }
 SMODS.Atlas{
-    key = 'vouchers',
-    path = 'Vouchers.png',
+    key = 'FunnyJoker',
+    path = 'FunnyJoker.png',
     px = 71, 
     py = 95
 }
