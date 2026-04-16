@@ -12,6 +12,18 @@ SMODS.Atlas{
     px = 71, 
     py = 95
 }
+SMODS.Atlas{
+    key = 'TrickyJoker',
+    path = 'TrickyJoker.png',
+    px = 71, 
+    py = 95
+}
+SMODS.Atlas{
+    key = 'HilariousJoker',
+    path = 'HilariousJoker.png',
+    px = 71, 
+    py = 95
+}
 
 --#endregion
 

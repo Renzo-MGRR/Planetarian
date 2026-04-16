@@ -1,0 +1,16 @@
+[manifest]
+version = "1.0.0"
+priority = 0
+
+#Adjusts Photograph to give 1.5X Mult
+[[patches]]
+[patches.pattern]
+target = 'game.lua'
+pattern = '''
+j_photograph=       {order = 78,  unlocked = true,  discovered = false, blueprint_compat = true, perishable_compat = true, eternal_compat = true, rarity = 1, cost = 5, name = "Photograph",set = "Joker", config = {extra = 2}, pos = {x=2,y=13}},
+'''
+position = 'at'
+payload = '''
+j_photograph=       {order = 78,  unlocked = true,  discovered = false, blueprint_compat = true, perishable_compat = true, eternal_compat = true, rarity = 1, cost = 5, name = "Photograph",set = "Joker", config = {extra = 1.5}, pos = {x=2,y=13}},
+'''
+match_indent = true

@@ -20,19 +20,27 @@ return {
                         'a {C:attention}Full House{}'
                     },
                 }
-            }
-        },
-        Voucher = {
-            v_Planetarian_ShowmanVoucher = {
-                name = 'Test Voucher',
+            },
+            j_Planetarian_TrickyJoker = {
+                name = 'Tricky Joker',
                 text = {
                     {
-                        '{C:attention}Joker{}, {C:tarot}Tarot{}, {C:planet}Planet{},',
-                        'and {C:spectral}Spectral{} cards may',
-                        'appear multiple times',
-                    }
+                        '{C:chips}+#1#{} Chips if played',
+                        'hand contains',
+                        'a {C:attention}Five of a Kind{}'
+                    },
                 }
-            }
+            },
+            j_Planetarian_HilariousJoker = {
+                name = 'Hilarious Joker',
+                text = {
+                    {
+                        '{C:mult}+#1#{} Mult if played',
+                        'hand contains',
+                        'a {C:attention}Five of a Kind{}'
+                    },
+                }
+            },
         }
     }
 }
