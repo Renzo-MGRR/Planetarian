@@ -17,6 +17,14 @@ return {
                         'a {C:attention}Full House{}'
                 },
             },
+            j_Planetarian_InsaneJoker = {
+                name = 'Insane Joker',
+                text = {
+                        '{C:chips}+#1#{} Chips if played',
+                        'hand contains',
+                        'a {C:attention}Straight Flush{}'
+                },
+            },
             j_Planetarian_TrickyJoker = {
                 name = 'Tricky Joker',
                 text = {

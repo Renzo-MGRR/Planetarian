@@ -24,11 +24,6 @@ SMODS.Joker{
     check_for_unlock = function(self,args) 
         return G.PROFILES[G.SETTINGS.profile].hand_usage.FiveofaKind.count > 0
     end,
-    in_pool = function(self, args) 
-        return {
-            SMODS.is_poker_hand_visible('Five of a Kind')
-        }
-    end,
     calculate = function(self, card, context)
         if context.joker_main and next(context.poker_hands['Five of a Kind']) then
             return {
