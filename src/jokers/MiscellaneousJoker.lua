@@ -1,16 +1,15 @@
 SMODS.Joker{
-    key = 'TrickyJoker',
-    atlas = 'TrickyJoker',
+    key = 'MiscellaneousJoker',
+    atlas = 'MiscellaneousJoker',
     pos = {
         x = 0,
         y = 0
     },
     config = {
         extra = {
-            chips = 180
+            chips = 220
         }
     },
-    unlocked = false,
     rarity = 1,
     cost = 4,
     blueprint_compat = true,
@@ -22,10 +21,10 @@ SMODS.Joker{
         }
     end,
     check_for_unlock = function(self,args) 
-        return G.PROFILES[G.SETTINGS.profile].hand_usage.FiveofaKind.count > 0
+        return G.PROFILES[G.SETTINGS.profile].hand_usage.FlushFive.count > 0
     end,
     calculate = function(self, card, context)
-        if context.joker_main and next(context.poker_hands['Five of a Kind']) then
+        if context.joker_main and next(context.poker_hands['Flush Five']) then
             return {
                 chips = card.ability.extra.chips
             }
