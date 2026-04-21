@@ -2,7 +2,7 @@
 version = "1.0.0"
 priority = 0
 
-#Adjusts Photograph to give 1.5X Mult
+#Adjusts Photograph to give X1.5 Mult
 [[patches]]
 [patches.pattern]
 target = 'game.lua'

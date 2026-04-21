@@ -2,7 +2,7 @@
 version = "1.0.0"
 priority = 0
 
-#Adjusts Devious Joker to give 120 chips
+#Adjusts Devious Joker to give 110 chips
 [[patches]]
 [patches.pattern]
 target = 'game.lua'
@@ -11,6 +11,6 @@ j_devious=          {order = 14,  unlocked = true,  discovered = false, blueprin
 '''
 position = 'at'
 payload = '''
-j_devious=          {order = 14,  unlocked = true,  discovered = false, blueprint_compat = true, perishable_compat = true, eternal_compat = true, rarity = 1, cost = 4, name = "Devious Joker",set = "Joker", config = {t_chips = 120, type = 'Straight'}, pos = {x=3,y=14}},
+j_devious=          {order = 14,  unlocked = true,  discovered = false, blueprint_compat = true, perishable_compat = true, eternal_compat = true, rarity = 1, cost = 4, name = "Devious Joker",set = "Joker", config = {t_chips = 110, type = 'Straight'}, pos = {x=3,y=14}},
 '''
 match_indent = true

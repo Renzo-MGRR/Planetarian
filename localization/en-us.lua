@@ -45,7 +45,7 @@ return {
                 },
             },
             j_Planetarian_MiscellaneousJoker = {
-                name = 'Tricky Joker',
+                name = 'Miscellaneous Joker',
                 text = {
                         '{C:chips}+#1#{} Chips if played',
                         'hand contains',
