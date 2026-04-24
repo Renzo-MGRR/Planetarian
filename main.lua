@@ -44,7 +44,18 @@ SMODS.Atlas{
 }
 
 --#endregion
-
+function table.contains(table, element)
+    for k, v in pairs(table) do
+        if v == element then return true end
+    end
+end
+function table.last(table)
+    local currentcounter = 0
+    for k, v in pairs(table) do
+        currentcounter = k
+    end
+    return table[currentcounter]
+end
 --#region File Loading
 
 local jokers_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/jokers")

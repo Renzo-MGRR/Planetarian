@@ -55,6 +55,13 @@ return {
                     'Discover a secret poker hand'
                 },
             },
+            j_Planetarian_Shaco = {
+                name = 'Shaco',
+                text = {
+                        'Copies the ability of',
+                        'all {C:attention}Jokers{}'
+                },
+            },
             j_Planetarian_HilariousJoker = {
                 name = 'Hilarious Joker',
                 text = {
