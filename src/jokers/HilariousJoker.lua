@@ -7,7 +7,7 @@ SMODS.Joker{
     },
     config = {
         extra = {
-            mult = 25
+            mult = 14
         }
     },
     unlocked = false,
@@ -21,11 +21,8 @@ SMODS.Joker{
             }
         }
     end,
-    check_for_unlock = function(self,args) 
-        return G.PROFILES[G.SETTINGS.profile].hand_usage.FiveofaKind.count > 0
-    end,
     calculate = function(self, card, context)
-        if context.joker_main and next(context.poker_hands['Five of a Kind']) then
+        if context.joker_main and next(context.poker_hands['Four of a Kind']) then
             return {
                 mult = card.ability.extra.mult
             }

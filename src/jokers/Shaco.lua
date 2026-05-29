@@ -1,9 +1,13 @@
 SMODS.Joker{
     key = 'Shaco',
-    atlas = 'TrickyJoker',
+    atlas = 'Shaco',
     pos = {
         x = 0,
         y = 0
+    },
+    soul_atlas = 'SoulShaco',
+    soul_pos = {
+        x = 0, y = 0
     },
     rarity = 4,
     cost = 20,

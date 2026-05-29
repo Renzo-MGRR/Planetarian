@@ -38,21 +38,7 @@ return {
                 text = {
                         '{C:chips}+#1#{} Chips if played',
                         'hand contains',
-                        'a {C:attention}Five of a Kind{}'
-                },
-                unlock = {
-                    'Discover a secret poker hand'
-                },
-            },
-            j_Planetarian_MiscellaneousJoker = {
-                name = 'Miscellaneous Joker',
-                text = {
-                        '{C:chips}+#1#{} Chips if played',
-                        'hand contains',
-                        'a {C:attention}Flush Five{}'
-                },
-                unlock = {
-                    'Discover a secret poker hand'
+                        'a {C:attention}Four of a Kind{}'
                 },
             },
             j_Planetarian_Shaco = {
@@ -67,10 +53,7 @@ return {
                 text = {
                         '{C:mult}+#1#{} Mult if played',
                         'hand contains',
-                        'a {C:attention}Five of a Kind{}'
-                },
-                unlock = {
-                    'Discover a secret poker hand'
+                        'a {C:attention}Four of a Kind{}'
                 },
             },
         }

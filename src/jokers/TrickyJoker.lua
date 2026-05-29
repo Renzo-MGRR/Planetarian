@@ -7,7 +7,7 @@ SMODS.Joker{
     },
     config = {
         extra = {
-            chips = 180
+            chips = 140
         }
     },
     unlocked = false,
@@ -25,7 +25,7 @@ SMODS.Joker{
         return G.PROFILES[G.SETTINGS.profile].hand_usage.FiveofaKind.count > 0
     end,
     calculate = function(self, card, context)
-        if context.joker_main and next(context.poker_hands['Five of a Kind']) then
+        if context.joker_main and next(context.poker_hands['Four of a Kind']) then
             return {
                 chips = card.ability.extra.chips
             }
