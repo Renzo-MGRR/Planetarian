@@ -1,0 +1,9 @@
+{
+    "id": "Planetarian1",
+    "name": "Planetarian",
+    "author": ["Renzo"],
+    "description": "All played poker hands get their deserved jokers!",
+    "prefix": "Planetarian",
+    "main_file": "main.lua",
+    "version": "0.0.1"
+}
