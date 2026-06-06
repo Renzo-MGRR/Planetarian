@@ -1,0 +1,133 @@
+[manifest]
+version = "1.0.0"
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = '''
+elseif context.individual then
+'''
+position = 'after'
+payload = '''
+    local handarea = G.hand
+    local playarea = G.play
+    for i = 1, #G.jokers.cards do  
+        if (G.jokers.cards[i].label == "j_Planetarian_MagicWand") then
+            handarea = G.play
+            playarea = G.hand
+            break
+        else
+            handarea = G.hand
+            playarea = G.play
+        end
+    end
+'''
+match_indent = true
+times = 1
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = '''
+elseif context.repetition then
+'''
+position = 'after'
+payload = '''
+    local handarea = G.hand
+    local playarea = G.play
+    for i = 1, #G.jokers.cards do  
+        if (G.jokers.cards[i].label == "j_Planetarian_MagicWand") then
+            handarea = G.play
+            playarea = G.hand
+            break
+        else
+            handarea = G.hand
+            playarea = G.play
+        end
+    end
+'''
+match_indent = true
+
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = '''
+if context.cardarea == G.hand then
+'''
+position = 'at'
+payload = '''
+if context.cardarea == handarea then
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = '''
+if context.cardarea == G.play then
+'''
+position = 'at'
+payload = '''
+if context.cardarea == playarea then
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = '''
+if self.ability.name == 'Hanging Chad' and (
+context.other_card == context.scoring_hand[1]) then
+    return {
+        message = localize('k_again_ex'),
+        repetitions = self.ability.extra,
+        card = self
+    }
+end
+'''
+position = 'at'
+payload = '''
+if self.ability.name == 'Hanging Chad' then
+    if playarea == G.play then
+        if context.other_card == context.scoring_hand[1] then
+            return {
+                message = localize('k_again_ex'),
+                repetitions = self.ability.extra,
+                card = self
+            }
+        end
+    else
+        if context.other_card == G.hand.cards[1] then 
+            return {
+                message = localize('k_again_ex'),
+                repetitions = self.ability.extra,
+                card = self
+            }
+        end
+    end
+end
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = '''
+for i = 1, #context.scoring_hand do
+    if context.scoring_hand[i]:is_face() then first_face = context.scoring_hand[i]; break end
+end
+'''
+position = 'at'
+payload = '''
+if playarea == G.hand then
+    for i = 1, #G.hand.cards do
+        if G.hand.cards[i]:is_face() then first_face = G.hand.cards[i]; break end
+    end
+else
+    for i = 1, #context.scoring_hand do
+        if context.scoring_hand[i]:is_face() then first_face = context.scoring_hand[i]; break end
+    end
+end
+'''
+match_indent = true

@@ -32,5 +32,9 @@ local ownerships_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "sr
 for _, file in ipairs(ownerships_src) do
     assert(SMODS.load_file("src/ownerships/" .. file))()
 end
+local enhancements_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/enhancements")
+for _, file in ipairs(enhancements_src) do
+    assert(SMODS.load_file("src/enhancements/" .. file))()
+end
 
 --#endregion
