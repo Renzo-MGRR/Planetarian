@@ -12,6 +12,10 @@ function table.last(table)
 end
 --#region File Loading
 
+local spectrals_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/spectrals")
+for _, file in ipairs(spectrals_src) do
+    assert(SMODS.load_file("src/spectrals/" .. file))()
+end
 local atlases_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/atlases")
 for _, file in ipairs(atlases_src) do
     assert(SMODS.load_file("src/atlases/" .. file))()

@@ -1,0 +1,22 @@
+[manifest]
+version = "1.0.0"
+priority = 0
+
+[[patches]]
+[patches.regex]
+target = '=[SMODS _ "src/utils.lua"]'
+pattern = "function SMODS.juice_up_blind()"
+position = "before"
+payload = '''
+    function SMODS.juice_up_card(card, time1, time2)
+        G.E_MANAGER:add_event(Event({
+            func = function()
+            card:juice_up(time1, time2)
+            return true
+            end
+        }))
+    end
+
+'''
+match_indent = true
+overwrite = false

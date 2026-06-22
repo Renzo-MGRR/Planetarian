@@ -28,3 +28,9 @@ SMODS.Joker:take_ownership('j_mail',
     },
     false
 )
+SMODS.Joker:take_ownership('j_hologram',
+    {
+        config = {extra = 0.2, Xmult = 1}
+    },
+    false
+)

@@ -9,4 +9,3 @@ SMODS.Joker{
     cost = 10,
     blueprint_compat = false
 }
-
